@@ -1,10 +1,10 @@
-function NavBar() {
+function TitleBar() {
     return (
-        <div className="NavBar">
+        <div className="titleBar">
             <h1 style={{marginRight: "2rem"}}>Renato's 4</h1>
             
         </div>
     )
 }
 
-export default NavBar;
+export default TitleBar;

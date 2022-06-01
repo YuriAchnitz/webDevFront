@@ -4,21 +4,26 @@
   --border_size: 2px;
 }
 
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
 }
 
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
 
-.returnButton{
+.item {
+  width: 100%;
+  height: 100%;
+}
+
+.returnButton {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -32,12 +37,12 @@
   transition: all 0.3s;
 }
 
-.returnButton:hover{
+.returnButton:hover {
   color: var(--secondary);
   background-color: var(--primary);
 }
 
-.profileBoxContainer{
+.profileBoxContainer {
   display: flex;
   width: 100%;
   color: var(--primary);
@@ -49,11 +54,200 @@
   align-items: center;
 }
 
-.profileBoxContainer b{
+.profileBoxContainer img {
+  border-radius: 50%;
+  border: var(--border_size) solid var(--primary);
+}
+
+.profileBoxContainer b {
   margin: 1rem;
 }
 
-.sideBarCcontainer{
+.menuContainer {
+  padding-left: 2rem;
+}
+
+.menu-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.itemBoxContainer {
+  display: flex;
+  width: 12em;
+  padding: 1rem;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border: var(--border_size) solid var(--primary);
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.itemBoxContainer img {
+  border: var(--border_size) solid var(--primary);
+  border-radius: 50%;
+}
+
+.itemBoxContainer p {
+  line-height: 0;
+}
+
+.itemBoxButton {
+  width: 100%;
+  height: 3.5rem;
+  font-size: large;
+  color: var(--primary);
+  border: var(--border_size) solid var(--primary);
+  background-color: var(--secondary);
+  transition: all 0.3s;
+}
+
+.itemBoxButton:hover {
+  color: var(--secondary);
+  background-color: green;
+  border: var(--border_size) solid green;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+
+.cartRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.cartButtonFinish {
+  width: 40%;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border: var(--border_size) solid var(--primary);
+  margin-left: 5rem;
+  padding: 0.5rem;
+  transition: all 0.3s;
+}
+
+.cartButtonFinish:hover {
+  color: var(--secondary);
+  background-color: green;
+  border: var(--border_size) solid green;
+}
+
+.cartItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+  gap: 2rem;
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.cartItemContainer p {
+  padding: 0.7rem;
+  border: var(--border_size) solid var(--primary);
+  border-radius: 0.5rem;
+}
+
+.CIName {
+  height: 100%;
+  font-size: larger;
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.CIButtonRemove {
+  padding: 0.7rem;
+  font-size: larger;
+  color: var(--primary);
+  align-items: center;
+  border: var(--border_size) solid var(--primary);
+  border-radius: 50%;
+  background-color: var(--secondary);
+  transition: all 0.3s;
+}
+
+.CIButtonRemove:hover {
+  color: var(--secondary);
+  background-color: red;
+  border: var(--border_size) solid red;
+}
+
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.orderItemContainer{
+  width: fit-content;
+  border: var(--border_size) solid var(--primary);
+  color: var(--primary);
+  background-color: var(--secondary);
+  padding: 1rem;
+}
+
+.OIp{
+  font-size: large;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border: var(--border_size) var(--primary);
+  border-style: solid solid solid none;
+  padding: 1rem;
+}
+
+.orderItemContainer strong{
+  font-size: larger;
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: var(--border_size) solid var(--primary);
+  padding: 1rem;
+}
+
+.orderItemRow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.orderItemColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orderItemColumn b{
+  padding: 0.5rem;
+}
+
+.orderSubItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.orderSubItem strong{
+  padding: 0.5rem;
+  border: var(--border_size) solid var(--primary);
+  border-radius: 0.5rem;
+}
+
+.sideBarCcontainer {
   width: 15rem;
   height: 100vh;
   display: flex;
@@ -66,7 +260,7 @@
   background-color: var(--secondary);
 }
 
-.sideBarButton{
+.sideBarButton {
   width: 100%;
   height: 3.5rem;
   font-size: large;
@@ -78,12 +272,12 @@
   transition: all 0.3s;
 }
 
-.sideBarButton:hover{
+.sideBarButton:hover {
   color: var(--secondary);
   background-color: var(--primary);
 }
 
-.NavBar{
+.titleBar {
   width: 100%;
   height: 5rem;
   display: flex;
