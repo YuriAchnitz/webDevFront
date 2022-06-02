@@ -89,12 +89,15 @@
 }
 
 .itemBoxContainer img {
+  width: 8rem;
+  height: 8rem;
   border: var(--border_size) solid var(--primary);
   border-radius: 50%;
 }
 
-.itemBoxContainer p {
-  line-height: 0;
+.itemBoxContainer l {
+  align-items: center;
+  text-align: center;
 }
 
 .itemBoxButton {
@@ -147,8 +150,10 @@
 .cartItemContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-left: 1rem;
+  padding-right: 10rem;
   gap: 2rem;
   color: var(--primary);
   background-color: var(--secondary);

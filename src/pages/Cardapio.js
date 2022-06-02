@@ -2,40 +2,44 @@ import React from 'react';
 import ItemBox from '../components/ItemBox';
 
 function Cardapio() {
-    const [users, setUsers] = React.useState([]);
-    const funcaoAssync = async () => {
-        const resultado = await fetch("https://reqres.in/api/users/");
-        const json = await resultado.json();
-        setUsers(json.data);
+    const [menu, setMenu] = React.useState([]);
+    const getMenu = async () => {
+        const res = await fetch("https://webdev-backend-whntohr7oq-rj.a.run.app/cardapio");
+        const json = await res.json();
+        setMenu(json);
     };
-    funcaoAssync()
+
+    React.useEffect(() => { getMenu() })
 
     return (
         <div className='menuContainer'>
 
             <h1>Lanches</h1>
             <div className="menu-row">
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
-                <ItemBox />
+                {menu.map((item) => {
+                    if (item.Tipo == "Lanche")
+                        return (
+                            <div>
+                                <ItemBox key={item.id} item_data={item} />
+                            </div>);
+                    else
+                        return null;
+                })}
             </div>
 
             <h1>Acompanhamentos</h1>
             <div className="menu-row">
-                {users.map((user) => {
-                    return (
-                        <div key={user.id}>
-                            <img key={user.avatar} src={user.avatar} />
-                            <p> <strong> {user.first_name} </strong> </p>
-                            <p> {user.email} </p>
-
-                        </div>);
-                })} </div></div>
+                {menu.map((item) => {
+                    if (item.Tipo != "Lanche")
+                        return (
+                            <div>
+                                <ItemBox key={item.id} item_data={item} />
+                            </div>);
+                    else
+                        return null;
+                })}
+            </div>
+        </div>
     )
 
 }
