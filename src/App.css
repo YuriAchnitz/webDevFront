@@ -95,9 +95,10 @@
   border-radius: 50%;
 }
 
-.itemBoxContainer l {
+.itemBoxContainer p {
   align-items: center;
   text-align: center;
+  margin: 0;
 }
 
 .itemBoxButton {
@@ -241,12 +242,23 @@
 .orderSubItem {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.orderSubItem p{
+  font-size: medium;
+  padding: 0.3rem;
+  margin: 0;
+  border: var(--border_size) solid var(--primary);
+  border-radius: 0.5rem;
 }
 
 .orderSubItem strong{
+  font-size: larger;
   padding: 0.5rem;
   border: var(--border_size) solid var(--primary);
   border-radius: 0.5rem;
@@ -277,9 +289,19 @@
   transition: all 0.3s;
 }
 
+.sideBarButton a{
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
 .sideBarButton:hover {
   color: var(--secondary);
   background-color: var(--primary);
+}
+
+.sideBarButton:hover a{
+  color: var(--secondary);
 }
 
 .titleBar {

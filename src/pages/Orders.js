@@ -13,12 +13,15 @@ function Orders() {
 
     return (
         <div className="ordersContainer">
-            <h2>Pedidos</h2>
+            <h1>Pedidos</h1>
 
-            {orders.map((order) => {
+            {orders.map((order, n = 0) => {
+                let x = orders.length;
+                x -= n;
+                n += 1;
                 return (
                     <div>
-                        <OrderItem key={order.id} order_data={order} />
+                        <OrderItem order_data={order} order_number={x} />
                     </div>);
             })}
 

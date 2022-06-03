@@ -12,8 +12,8 @@ function ItemBox(props) {
         <div className="itemBoxContainer">
             <img src={item_image_src} alt={item_name} />
 
-            <l>{item_name}</l>
-            <l>Preço: {Number(item_price).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</l>
+            <p>{item_name}</p>
+            <p>Preço: {Number(item_price).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</p>
 
             <button className="itemBoxButton" onClick=""> Adicionar <IoBagAddSharp /> </button>
         </div>
