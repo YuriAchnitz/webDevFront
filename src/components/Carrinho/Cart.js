@@ -1,4 +1,4 @@
-import CartItem from "../components/CartIem";
+import CartItem from "./CartIem";
 
 function Cart() {
     const total = 9999999;

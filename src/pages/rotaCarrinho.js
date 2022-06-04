@@ -1,8 +1,8 @@
-import SideBar from './SideBar';
-import TitleBar from './TitleBar';
-import Orders from '../pages/Orders';
+import SideBar from '../components/SideBar';
+import TitleBar from '../components/TitleBar';
+import Cart from '../components/Carrinho/Cart';
 
-function routeOrders() {
+function routeCart() {
   return (
     <div className="flex-row">
       <div>
@@ -12,10 +12,10 @@ function routeOrders() {
       <div className='flex-column' style={{ paddingLeft: '15rem' }}>
         <TitleBar />
 
-        <Orders />
+        <Cart />
       </div>
     </div>
   );
 }
 
-export default routeOrders;
+export default routeCart;

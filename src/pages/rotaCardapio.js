@@ -1,6 +1,6 @@
-import SideBar from './SideBar';
-import TitleBar from './TitleBar';
-import Cardapio from '../pages/Cardapio';
+import SideBar from '../components/SideBar';
+import TitleBar from '../components/TitleBar';
+import Cardapio from '../components/Cardapio/Cardapio';
 
 function routeCardapio() {
   return (

@@ -1,5 +1,5 @@
-import TitleBar from './TitleBar';
-import Login from '../pages/Login';
+import TitleBar from '../components/TitleBar';
+import Login from '../components/Login/Login';
 
 function routeLogin() {
   return (

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RouteCardapio from './components/rotaCardapio';
-import RouteCart from './components/rotaCarrinho';
-import RouteOrders from './components/rotaPedidos';
-import RouteLogin from './components/rotaLogin';
+import RouteCardapio from './pages/rotaCardapio';
+import RouteCart from './pages/rotaCarrinho';
+import RouteOrders from './pages/rotaPedidos';
+import RouteLogin from './pages/rotaLogin';
 
 function RoutesApp(){
   return(

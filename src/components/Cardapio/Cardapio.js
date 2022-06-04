@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemBox from '../components/ItemBox';
+import ItemBox from './ItemBox';
 
 function Cardapio() {
     const [menu, setMenu] = React.useState([]);
