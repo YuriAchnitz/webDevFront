@@ -9,7 +9,7 @@ function Cart() {
 
             <div className="flex-column">
                 <CartItem name="X Gordo" quantity={5} price={19.99}/>
-                <CartItem name="Hamburguer Caseiro da Casa" quantity={1} price={10}/>
+                <CartItem name="Hamburguer Caseiro" quantity={1} price={10}/>
                 <CartItem name="Le Lanché Dè Primeré" quantity={2} price={34.1}/>
             </div>
 
