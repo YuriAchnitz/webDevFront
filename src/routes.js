@@ -5,11 +5,12 @@ import RouteOrders from './pages/rotaPedidos';
 import RouteLogin from './pages/rotaLogin';
 
 function RoutesApp(){
+
   return(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <RouteLogin/> } />
-        <Route path="/cardapio" element= {<RouteCardapio />} />
+        <Route path="/cardapio" element= {<RouteCardapio/>} />
         <Route path="/cart" element={ <RouteCart/> } />
         <Route path="/orders" element={ <RouteOrders/> } />
         

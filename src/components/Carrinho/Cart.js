@@ -1,21 +1,27 @@
 import CartItem from "./CartIem";
 
 function Cart() {
-    const total = 9999999;
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    const total = cart.reduce((ac, e) => {
+        return ac += (e.Preço * e.qtd)
+    }, 0);
+    
+
+    const clickHandler = (event) => {
+        event.preventDefault();
+        localStorage.setItem("cart", JSON.stringify([]));
+    }
 
     return (
         <div className="cartContainer">
             <h1>Carrinho</h1>
-
             <div className="flex-column">
-                <CartItem name="X Gordo" quantity={5} price={19.99}/>
-                <CartItem name="Hamburguer Caseiro" quantity={1} price={10}/>
-                <CartItem name="Le Lanché Dè Primeré" quantity={2} price={34.1}/>
+                {cart.map((e) => <CartItem name={e.Nome} quantity={e.qtd} price={e.Preço} id={e.id}/>)}
             </div>
 
             <div className="cartRow">
                 <h2>Total: {Number(total).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</h2>
-                <button className="cartButtonFinish" onClick="pass"> Finalizar </button>
+                <button className="cartButtonFinish" onClick={clickHandler}> Finalizar </button>
             </div>
         </div>
     )

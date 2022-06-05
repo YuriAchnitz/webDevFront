@@ -7,7 +7,9 @@ function Login() {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Logado com o usuário: ${name}`);
+        localStorage.setItem("username", name);
+        localStorage.setItem("cart", JSON.stringify([]));
+        alert(`Logado com o usuário: ${localStorage.getItem("username")}`);
         navigate('/cardapio');
       }
     return (
