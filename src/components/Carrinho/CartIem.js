@@ -12,6 +12,7 @@ function CartItem(props) {
         const index = cart.map((e) => e.id).indexOf(id);
         cart.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
+        window.location.reload(false);
     };
 
     return (

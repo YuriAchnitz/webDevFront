@@ -31,6 +31,11 @@ function SideBar() {
         navigate('/cart');
     };
 
+    const admin = (event) => {
+        event.preventDefault();
+        navigate('/admin');
+    };
+
     return (
         <div className="sideBarCcontainer">
             <button className="returnButton" onClick={logout}> <FaArrowLeft /> </button>
@@ -38,6 +43,7 @@ function SideBar() {
             <button className="sideBarButton" onClick={cardapio}> <MdOutlineMenuBook /> Cardápio </button>
             <button className="sideBarButton" onClick={carrinho}> <RiShoppingCart2Fill /> Carrinho </button>
             <button className="sideBarButton" onClick={pedidos}> <RiShoppingBag3Fill /> Pedidos </button>
+            {localStorage.getItem("username").endsWith("admin") ? <button className="sideBarButton" onClick={admin}> <RiShoppingBag3Fill /> Admin </button> : <></>}
         </div>
     )
 }
