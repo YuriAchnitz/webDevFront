@@ -298,6 +298,7 @@
 .sideBarButton:hover {
   color: var(--secondary);
   background-color: var(--primary);
+  cursor: pointer;
 }
 
 .sideBarButton:hover a{
