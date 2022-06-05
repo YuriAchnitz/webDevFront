@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemBox from './ItemBox';
+import Categoria from './Categoria';
 
 function Cardapio() {
     const [menu, setMenu] = React.useState([]);
@@ -11,34 +11,12 @@ function Cardapio() {
 
     React.useEffect(() => { getMenu() })
 
+    const categorias = new Set();
+    menu.forEach((e) => categorias.add(e.Tipo));
+
     return (
         <div className='menuContainer'>
-
-            <h1>Lanches</h1>
-            <div className="menu-row">
-                {menu.map((item) => {
-                    if (item.Tipo == "Lanche")
-                        return (
-                            <div>
-                                <ItemBox key={item.id} item_data={item} />
-                            </div>);
-                    else
-                        return null;
-                })}
-            </div>
-
-            <h1>Acompanhamentos</h1>
-            <div className="menu-row">
-                {menu.map((item) => {
-                    if (item.Tipo != "Lanche")
-                        return (
-                            <div>
-                                <ItemBox key={item.id} item_data={item} />
-                            </div>);
-                    else
-                        return null;
-                })}
-            </div>
+            { [...categorias].map((e) => <Categoria cat={e} itens={menu}/>) }
         </div>
     )
 
