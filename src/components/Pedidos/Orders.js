@@ -19,10 +19,14 @@ function Orders() {
                 let x = orders.length;
                 x -= n;
                 n += 1;
-                return (
-                    <div>
-                        <OrderItem order_data={order} order_number={x} />
-                    </div>);
+                if(order.Cliente === localStorage.getItem("username")) {
+                    return (
+                        <div>
+                            <OrderItem order_data={order} order_number={x} />
+                        </div>
+                        );
+                } else 
+                    return null;
             })}
 
         </div>
