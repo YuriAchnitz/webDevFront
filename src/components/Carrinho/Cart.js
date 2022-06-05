@@ -10,6 +10,18 @@ function Cart() {
     const clickHandler = (event) => {
         event.preventDefault();
         localStorage.setItem("cart", JSON.stringify([]));
+        const options = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                Itens: cart,
+                Data: new Date().toISOString(),
+                Cliente: localStorage.getItem("username"),
+                PreçoTotal: total,
+                Status: "Aguardando Confirmação"
+            })
+        };
+        fetch('https://webdev-backend-whntohr7oq-rj.a.run.app/pedido/createPedido', options).then(alert("Pedido enviado!")).catch("Erro");
     }
 
     return (
