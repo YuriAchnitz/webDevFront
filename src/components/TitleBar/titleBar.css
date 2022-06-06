@@ -8,3 +8,10 @@
     background-color: var(--primary);
     color: var(--textPrimary);
 }
+
+.logo {
+    height: 90%;
+    width: auto;
+    padding: 1rem;
+    margin-right: auto;
+}

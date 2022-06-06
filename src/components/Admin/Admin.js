@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { BsTrashFill } from "react-icons/bs";
+import './admin.css'
 
-function TableItem({item}) {
+function TableItem({ item }) {
     const deleteItem = (event) => {
         event.preventDefault();
-        fetch('https://webdev-backend-whntohr7oq-rj.a.run.app/cardapio/deleteItem?id=' + item.id, {method: 'DELETE'}).then(alert("Item apagado!"));
+        fetch('https://webdev-backend-whntohr7oq-rj.a.run.app/cardapio/deleteItem?id=' + item.id, { method: 'DELETE' }).then(alert("Item apagado!"));
     }
-    
+
     return (
         <tr>
             <td>{item.Nome}</td>
             <td>{Number(item.Preço).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</td>
             <td>{item.Tipo}</td>
             <td>{item.Img}</td>
-            <td><button className="CIButtonRemove" onClick={deleteItem}> <BsTrashFill /></button></td>
+            <td><button className="AdminButtonRemove" onClick={deleteItem}> <BsTrashFill /></button></td>
         </tr>
     )
 }
@@ -59,37 +60,37 @@ export default function Admin() {
     return (
         <div className='menuContainer'>
             <h1>Adicionar Item ao Cardapio</h1>
-            <form className='loginForm' onSubmit={handleSubmit}>
+            <form className='adminForm' onSubmit={handleSubmit}>
                 <label>
-                    Nome: 
+                    Nome:
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                 </label>
 
                 <label>
-                    Preço: 
+                    Preço:
                     <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
                 </label>
 
                 <label>
-                    Descrição: 
+                    Descrição:
                     <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} />
                 </label>
 
                 <label>
-                    Tipo: 
+                    Tipo:
                     <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
                 </label>
 
-                <label>
-                    Imagem: 
-                    <input type="text" value={img} onChange={(e) => setImg(e.target.value)} />
+                <label style={{width:"100%"}}>
+                    Imagem:
+                    <input type="text" style={{width:"90%"}} value={img} onChange={(e) => setImg(e.target.value)} />
                 </label>
 
-                <input type="submit" value="Enviar" />
+                <button type="submit" >Enviar</button>
             </form>
 
             <h1>Itens Atuais</h1>
-            <table>
+            <table className="adminTable">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -99,11 +100,11 @@ export default function Admin() {
                         <th>Ações</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
-                    {menu.map((e) => <TableItem item={e}/>)}
+                    {menu.map((e) => <TableItem item={e} />)}
                 </tbody>
-            </table> 
+            </table>
         </div>
     )
 };

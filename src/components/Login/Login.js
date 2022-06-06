@@ -12,22 +12,22 @@ function Login() {
         localStorage.setItem("cart", JSON.stringify([]));
         alert(`Logado com o usuário: ${localStorage.getItem("username")}`);
         navigate('/cardapio');
-      }
+    }
     return (
         <div className='login'>
-        <div className='loginBox'>
-            <form className='loginForm' onSubmit={handleSubmit}>
-                <label>
-                    Usuário: 
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                </label>
-                <label>
-                    Senha: 
-                    <input type="password" name="password" />
-                </label>
-                <input type="submit" value="Enviar" />
-            </form>
-        </div>
+            <div className='loginBox'>
+                <form className='loginForm' onSubmit={handleSubmit}>
+                    <label>
+                        <b>Usuário:</b>
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                    </label>
+                    <label>
+                        <b>Senha:</b>
+                        <input type="password" name="password" />
+                    </label>
+                    <button type="submit" > <b>Entrar</b> </button>
+                </form>
+            </div>
         </div>
     )
 }

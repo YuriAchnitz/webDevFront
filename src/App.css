@@ -11,7 +11,7 @@
   --textPrimary: rgb(var(--c4));
   --textSecondary: rgb(var(--c3));
   --accentPrimary: rgba(var(--c1), 0.5);
-  --accentSecondary: rgba(var(--c1), 0.2);
+  --accentSecondary: rgba(var(--c1), 0.3);
 
   --border_size: 2px;
 }

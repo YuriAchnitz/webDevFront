@@ -67,6 +67,8 @@
 }
 
 .profileBoxContainer img {
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
     border: var(--border_size) solid var(--primary);
 }
