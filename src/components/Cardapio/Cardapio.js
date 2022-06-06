@@ -1,5 +1,7 @@
 import React from 'react';
 import Categoria from './Categoria';
+import './menu.css'
+import { ToastContainer } from 'react-toastify'
 
 function Cardapio() {
     const [menu, setMenu] = React.useState([]);
@@ -17,6 +19,7 @@ function Cardapio() {
     return (
         <div className='menuContainer'>
             { [...categorias].map((e) => <Categoria cat={e} itens={menu}/>) }
+            <ToastContainer theme='colored'/>
         </div>
     )
 

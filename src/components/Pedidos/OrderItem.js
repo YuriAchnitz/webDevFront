@@ -6,8 +6,8 @@ function OrderItem(props) {
     const order_number = props.order_number;
     const total_price = order_data.PreçoTotal;
     const client_name = order_data.Cliente;
-    const order_time = order_data.Data;
     const order_items = order_data.Itens;
+    const order_time = new Date(Date.parse(order_data.Data))
 
     return (
         <div className="orderItemContainer">
@@ -15,7 +15,7 @@ function OrderItem(props) {
                 <p><strong>Pedido nº{order_number}</strong></p>
                 <p className="OIp">Preço total: {Number(total_price).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</p>
                 <p className="OIp">Cliente: {client_name}</p>
-                <p className="OIp">Horário: {order_time}</p>
+                <p className="OIp">Data e hora: {order_time.toLocaleString()}</p>
             </div>
 
             <div className="orderItemColumn">

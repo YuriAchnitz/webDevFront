@@ -1,4 +1,4 @@
-import TitleBar from '../components/TitleBar';
+import TitleBar from '../components/TitleBar/TitleBar';
 import Login from '../components/Login/Login';
 
 function routeLogin() {

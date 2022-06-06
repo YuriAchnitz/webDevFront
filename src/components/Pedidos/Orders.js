@@ -1,4 +1,5 @@
 import React from 'react'
+import './orders.css'
 import OrderItem from "./OrderItem";
 
 function Orders() {

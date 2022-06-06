@@ -17,7 +17,7 @@ function CartItem(props) {
 
     return (
         <div className="cartItemContainer">
-            <p className="CIName"><strong>{item_name}</strong></p>
+            <b>{item_name}</b>
             <p>Quantidade: {item_qtt}</p>
             <p>Preço: {Number(item_price).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</p>
             <p>Total: {Number(item_price * item_qtt).toLocaleString(undefined, { style: 'currency', currency: 'BRL' })}</p>

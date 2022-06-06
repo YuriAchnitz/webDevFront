@@ -1,0 +1,82 @@
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.cartRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.cartButtonFinish {
+    width: 40%;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--textPrimary);
+    background-color: var(--primary);
+    border: var(--border_size) solid var(--primary);
+    border-radius: 1rem;
+    margin-left: 5rem;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+
+.cartButtonFinish:hover {
+    color: var(--textPrimary);
+    background-color: green;
+    border: var(--border_size) solid green;
+    cursor: pointer;
+}
+
+
+.cartItemContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    color: var(--textSecondary);
+    background-color: var(--accentSecondary);
+    border: var(--border_size) solid var(--primary);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.cartItemContainer p {
+    font-size: large;
+    padding: 0.7rem;
+    background-color: var(--accentSecondary);
+    border-radius: 0.5rem;
+    margin: 0;
+}
+
+.cartItemContainer b {
+    font-size: larger;
+    padding: 0.7rem;
+    color: var(--textPrimary);
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+
+.CIButtonRemove {
+    padding: 0.7rem;
+    font-size: larger;
+    color: var(--primary);
+    align-items: center;
+    border: var(--border_size) solid var(--primary);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.CIButtonRemove:hover {
+    color: var(--textPrimary);
+    background-color: red;
+    border: var(--border_size) solid red;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 function ProfileBox() {
     const profile_image_src = "https://pngrow.com/download/51988"
-    const profile_name = "Usuário"
+    const profile_name = "O Poderoso Zé"
 
     return (
         <div className="profileBoxContainer">
