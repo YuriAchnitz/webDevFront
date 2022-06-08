@@ -81,9 +81,9 @@ export default function Admin() {
                     <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
                 </label>
 
-                <label style={{width:"100%"}}>
+                <label >
                     Imagem:
-                    <input type="text" style={{width:"90%"}} value={img} onChange={(e) => setImg(e.target.value)} />
+                    <input type="text" value={img} onChange={(e) => setImg(e.target.value)} />
                 </label>
 
                 <button type="submit" >Enviar</button>

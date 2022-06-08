@@ -1,5 +1,5 @@
 function ProfileBox() {
-    const profile_image_src = "https://r53.cooltext.com/rendered/cooltext412596489302650.gif"
+    const profile_image_src = "/logo192.png"
 
     let uname = localStorage.getItem("username");
     if (uname === "") {

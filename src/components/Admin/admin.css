@@ -28,12 +28,12 @@
     background-color: var(--primary);
     padding: 1rem;
     transition: all 0.2s;
-    cursor: pointer;
 }
 
 .adminForm button:hover{
     border: var(--border_size) solid green;
     background-color: green;
+    cursor: pointer;
 }
 
 .adminTable{
@@ -63,5 +63,6 @@
 .AdminButtonRemove:hover{
     background-color: red;
     border: var(--border_size) solid red;
+    cursor: pointer;
 }
 
